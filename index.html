@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shubham Gosai — Portfolio</title>
+  <meta name="description" content="Professional portfolio showcasing projects, skills, and experience." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: {50:'#eef2ff',100:'#e0e7ff',200:'#c7d2fe',300:'#a5b4fc',400:'#818cf8',500:'#6366f1',600:'#4f46e5',700:'#4338ca',800:'#3730a3',900:'#312e81'}
+          },
+          boxShadow: { glow: '0 10px 30px rgba(99,102,241,0.25)' }
+        }
+      },
+      darkMode: 'class'
+    }
+  </script>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+</head>
+<body class="font-inter bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-200 transition-colors duration-300">
+  <header class="sticky top-0 z-30 backdrop-blur bg-white/70 dark:bg-slate-950/70 border-b border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <img src="./assets/favicon.svg" alt="logo" class="w-8 h-8">
+        <span class="font-extrabold tracking-tight text-xl">Shubham<span class="text-brand-600">.</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#about" class="hover:text-brand-600">About</a>
+        <a href="#skills" class="hover:text-brand-600">Skills</a>
+        <a href="#projects" class="hover:text-brand-600">Projects</a>
+        <a href="#experience" class="hover:text-brand-600">Experience</a>
+        <a href="#contact" class="hover:text-brand-600">Contact</a>
+        <a href="./assets/Shubham_Gosai_Resume.pdf" download class="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-brand-600 text-white shadow-glow hover:bg-brand-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16l4-5h-3V4h-2v7H8l4 5z"/><path d="M5 18h14v2H5z"/></svg>
+          Resume
+        </a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" aria-label="Toggle dark mode" class="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800">
+          <svg id="sun" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden dark:inline" viewBox="0 0 24 24" fill="currentColor"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.8 1.42-1.42zM1 13h3v-2H1v2zm10 10h2v-3h-2v3zm9-10v-2h-3v2h3zm-3.95 7.95l1.41 1.41 1.8-1.79-1.41-1.41-1.8 1.79zM12 6a6 6 0 100 12 6 6 0 000-12zm7-1l-1.8-1.79-1.41 1.41 1.79 1.8L19 5z"/></svg>
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 dark:hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M12.74 2.25a9 9 0 108.99 8 7.5 7.5 0 01-8.99-8z"/></svg>
+        </button>
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
+      <nav class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="#about" class="hover:text-brand-600">About</a>
+        <a href="#skills" class="hover:text-brand-600">Skills</a>
+        <a href="#projects" class="hover:text-brand-600">Projects</a>
+        <a href="#experience" class="hover:text-brand-600">Experience</a>
+        <a href="#contact" class="hover:text-brand-600">Contact</a>
+        <a href="./assets/Shubham_Gosai_Resume.pdf" download class="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-brand-600 text-white w-max">Download Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 opacity-40 dark:opacity-20 blur-3xl" aria-hidden="true">
+      <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-brand-300"></div>
+      <div class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-brand-500"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <span class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold px-3 py-1 rounded-full bg-brand-100 text-brand-700 dark:bg-brand-900/40 dark:text-brand-300">Open to Work</span>
+        <h1 class="mt-6 text-4xl lg:text-6xl font-extrabold leading-tight">Building clean, fast and reliable <span class="text-brand-600">apps & websites</span>.</h1>
+        <p class="mt-5 text-slate-600 dark:text-slate-300 max-w-xl">Full Stack Developer focused on modern, accessible interfaces and robust backends. I love TypeScript, React, Node.js, and great developer experience.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#projects" class="px-5 py-3 rounded-xl bg-brand-600 text-white shadow-glow hover:bg-brand-700">View Projects</a>
+          <a href="#contact" class="px-5 py-3 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-900">Contact Me</a>
+        </div>
+        <div class="mt-10 flex items-center gap-6 text-sm text-slate-500 dark:text-slate-400">
+          <div class="flex items-center gap-2"><span class="font-bold text-slate-800 dark:text-slate-200">React</span> • Next.js • Tailwind</div>
+          <div class="hidden md:block h-5 w-px bg-slate-300 dark:bg-slate-700"></div>
+          <div class="flex items-center gap-2"><span class="font-bold text-slate-800 dark:text-slate-200">Node</span> • Express • MongoDB</div>
+        </div>
+      </div>
+      <div class="relative">
+        <img src="./assets/hero-avatar.svg" alt="Developer Illustration" class="w-full max-w-md mx-auto drop-shadow-2xl">
+        <div class="absolute -bottom-4 -right-4 bg-white dark:bg-slate-900 rounded-2xl shadow-lg p-4 border border-slate-200 dark:border-slate-800">
+          <p class="text-xs text-slate-500">Currently learning</p>
+          <p class="font-semibold">Next.js 15 • AWS Basics</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-16 lg:py-24 border-t border-slate-200/70 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-3 gap-10 items-start">
+      <div>
+        <h2 class="text-2xl font-bold">About</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">Who I am & what I do</p>
+      </div>
+      <div class="lg:col-span-2 text-slate-600 dark:text-slate-300 space-y-4">
+        <p>I am a fresher Full Stack Developer with a strong foundation in modern web technologies. I enjoy building performant, accessible, and maintainable products that solve real problems.</p>
+        <p>My toolkit includes <strong>HTML, CSS, JavaScript/TypeScript, React, Next.js, Node.js, Express, MongoDB,</strong> and <strong>Firebase</strong>. I’ve also worked with Git/GitHub, REST APIs, and CI/CD workflows.</p>
+        <div class="flex gap-3">
+          <a href="./assets/Shubham_Gosai_Resume.pdf" download class="px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Download Resume</a>
+          <a href="mailto:hello@example.com" class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-900">Hire Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="py-16 lg:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold">Skills</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+        <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+          <h3 class="font-semibold">Frontend</h3>
+          <ul class="mt-3 text-sm text-slate-600 dark:text-slate-300 space-y-1">
+            <li>HTML5, CSS3, Tailwind</li>
+            <li>JavaScript (ES6+), TypeScript</li>
+            <li>React, Next.js</li>
+          </ul>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+          <h3 class="font-semibold">Backend</h3>
+          <ul class="mt-3 text-sm text-slate-600 dark:text-slate-300 space-y-1">
+            <li>Node.js, Express</li>
+            <li>REST APIs, Auth</li>
+            <li>WebSockets (basics)</li>
+          </ul>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+          <h3 class="font-semibold">Databases & Cloud</h3>
+          <ul class="mt-3 text-sm text-slate-600 dark:text-slate-300 space-y-1">
+            <li>MongoDB, Mongoose</li>
+            <li>MySQL (basics)</li>
+            <li>Firebase (Auth/Firestore/Hosting)</li>
+          </ul>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+          <h3 class="font-semibold">Tools</h3>
+          <ul class="mt-3 text-sm text-slate-600 dark:text-slate-300 space-y-1">
+            <li>Git & GitHub</li>
+            <li>Postman</li>
+            <li>CI/CD (GitHub Actions)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-16 lg:py-24 border-t border-slate-200/70 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold">Projects</h2>
+          <p class="text-slate-600 dark:text-slate-300 mt-2">A few things I’ve built recently</p>
+        </div>
+        <a href="#" class="text-sm underline underline-offset-4 hover:text-brand-600">See all</a>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 mt-8">
+        <article class="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+          <img src="./assets/project-1.jpg" alt="Project 1" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+          <div class="p-6">
+            <h3 class="font-semibold text-lg">Flight Booking App</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Full-stack app with React, Node, Express, and MongoDB. Features search, booking flow, and user auth.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <a href="#" class="text-sm inline-flex items-center gap-2 hover:text-brand-600">Live Demo
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3l7 7-1.4 1.4-4.6-4.6V21h-2V6.8L8.4 11.4 7 10l7-7z"/></svg>
+              </a>
+              <div class="text-xs px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">React • Node</div>
+            </div>
+          </div>
+        </article>
+        <article class="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+          <img src="./assets/project-2.jpg" alt="Project 2" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+          <div class="p-6">
+            <h3 class="font-semibold text-lg">Portfolio Website</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Responsive portfolio with dark mode, smooth navigation, and accessible UI.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <a href="#" class="text-sm inline-flex items-center gap-2 hover:text-brand-600">Source Code
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3l7 7-1.4 1.4-4.6-4.6V21h-2V6.8L8.4 11.4 7 10l7-7z"/></svg>
+              </a>
+              <div class="text-xs px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">HTML • Tailwind</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="py-16 lg:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold">Experience</h2>
+      <div class="mt-8 space-y-6">
+        <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold">App Developer Intern — ABC Tech</h3>
+            <span class="text-sm text-slate-500">Jun 2024 — Aug 2024</span>
+          </div>
+          <ul class="mt-3 text-sm list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-300">
+            <li>Built reusable UI components in React; improved page load by 25%.</li>
+            <li>Integrated Firebase Auth & Firestore for secure user onboarding.</li>
+            <li>Wrote unit tests and improved code coverage to 80%.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-16 lg:py-24 border-t border-slate-200/70 dark:border-slate-800">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold">Contact</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-300">Let’s build something great together.</p>
+      <form name="contact" class="mt-8 grid gap-4 sm:grid-cols-2" onsubmit="return handleSubmit(event)">
+        <div class="sm:col-span-1">
+          <label class="block text-sm mb-2" for="name">Name</label>
+          <input id="name" name="name" type="text" required class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500">
+        </div>
+        <div class="sm:col-span-1">
+          <label class="block text-sm mb-2" for="email">Email</label>
+          <input id="email" name="email" type="email" required class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500">
+        </div>
+        <div class="sm:col-span-2">
+          <label class="block text-sm mb-2" for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500"></textarea>
+        </div>
+        <div class="sm:col-span-2 flex items-center justify-between gap-3">
+          <p id="formStatus" class="text-sm"></p>
+          <button type="submit" class="px-5 py-3 rounded-xl bg-brand-600 text-white shadow-glow hover:bg-brand-700">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-8 border-t border-slate-200/70 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+      <p>&copy; <span id="year"></span> Shubham Gosai. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="hover:text-brand-600">GitHub</a>
+        <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener" class="hover:text-brand-600">LinkedIn</a>
+        <a href="mailto:hello@example.com" class="hover:text-brand-600">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+(function initTheme(){const s=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&p)){document.documentElement.classList.add('dark')}document.getElementById('year').textContent=new Date().getFullYear()})();
+document.getElementById('themeToggle').addEventListener('click',()=>{const d=document.documentElement.classList.toggle('dark');localStorage.setItem('theme',d?'dark':'light')});
+const btn=document.getElementById('mobileMenuBtn');const menu=document.getElementById('mobileMenu');btn.addEventListener('click',()=>menu.classList.toggle('hidden'));
+function handleSubmit(e){e.preventDefault();const status=document.getElementById('formStatus');status.textContent='Thanks! Your message has been recorded (demo).';e.target.reset();return false;}
